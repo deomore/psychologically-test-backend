@@ -1,0 +1,59 @@
+
+
+entity ResultTest {
+finishedAt Instant required,
+EXTRAVERSION_TYPE Integer required,
+SPONTANEITY_TYPE Integer required,
+AGGRESSIVENESS_TYPE Integer required,
+RIGIDITY_TYPE Integer required,
+INTROVERSION_TYPE Integer required,
+SENSITIVITY_TYPE Integer required,
+ANXIETY_TYPE Integer required,
+LABILITY_TYPE Integer required,
+LIE_TYPE Integer required,
+AGGRAVATION_TYPE Integer
+}
+
+entity Answer {
+answer Boolean required
+}
+
+entity Question {
+question String required,
+isAdd Boolean required
+}
+
+entity QuestionType {
+type Psychotype required,
+coefficient Integer required,
+description String required
+}
+
+
+relationship ManyToOne {
+Question{questionType} to QuestionType
+Answer{question} to Question
+Answer{resultTest} to ResultTest
+ResultTest{user} to User
+}
+
+paginate ResultTest with pagination
+
+service all with serviceImpl
+service all with serviceClass
+dto all with mapstruct
+
+filter ResultTest, Question, Answer
+
+enum Psychotype {
+EXTRAVERSION_TYPE,
+SPONTANEITY_TYPE,
+AGGRESSIVENESS_TYPE,
+RIGIDITY_TYPE,
+INTROVERSION_TYPE,
+SENSITIVITY_TYPE,
+ANXIETY_TYPE,
+LABILITY_TYPE,
+LIE_TYPE,
+AGGRAVATION_TYPE
+}

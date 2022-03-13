@@ -1,0 +1,33 @@
+{
+  "psychologicallyTestBackendApp": {
+    "resultTest": {
+      "home": {
+        "title": "Результаты теста",
+        "createLabel": "Создать новый результат теста",
+        "createOrEditLabel": "Создать или отредактировать Result Test",
+        "notFound": "No Result Tests found"
+      },
+      "created": "Новый Result Test создан с идентификатором {{ param }}",
+      "updated": "Result Test обновлен с идентификатором {{ param }}",
+      "deleted": "Result Test удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Result Test {{ id }}?"
+      },
+      "detail": {
+        "title": "Result Test"
+      },
+      "finishedAt": "Дата окончания",
+      "EXTRAVERSION_TYPE": "Экстраверсия тип",
+      "SPONTANEITY_TYPE": "Спонтанность тип",
+      "AGGRESSIVENESS_TYPE": "Агрессивность тип",
+      "RIGIDITY_TYPE": "Ригидность тип",
+      "INTROVERSION_TYPE": "Интроверсия тип",
+      "SENSITIVITY_TYPE": "Сензитивность тип",
+      "ANXIETY_TYPE": "Тревожность боязливый",
+      "LABILITY_TYPE": "Аффективно-Лабильность",
+      "LIE_TYPE": "Ложь",
+      "AGGRAVATION_TYPE": "Аггравация",
+      "user": "Пользователь"
+    }
+  }
+}
